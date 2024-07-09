@@ -1,0 +1,527 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  text-align: center;
+  background-color: #EFFDD9;
+}
+
+.dark-mode {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.dark-mode .navbar {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.dark-mode .home {
+  background-color: #2c3e50;
+  color: white;
+  
+}
+
+.dark-mode .projects {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.dark-mode .card-content h2{
+  color: black;
+}
+
+.dark-mode .special {
+  color: white;
+}
+
+.dark-mode .i {
+  color: white;
+}
+
+.dark-mode .navbar-link {
+  color: white;
+}
+
+.dark-mode .navbar-link:hover {
+  color: #6fbb73;
+}
+
+.dark-mode .about-section {
+  background-color: #2c3e50;
+}
+
+.dark-mode .stillHere {
+  background-color: #2c3e50;
+}
+
+
+
+
+.inria-serif-light {
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inria-serif-regular {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-serif-bold {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inria-serif-light-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inria-serif-regular-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inria-serif-bold-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h1 {
+  font-family: "Inria Serif", serif;
+}
+
+
+
+.navbar {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #EFFDD9;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0, .5);
+}
+
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  font-family: "inria-serif-light", serif;
+}
+
+.navbar-logo {
+  
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "inria-serif", serif;
+  gap: 15px;
+}
+
+.navbar-link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 0.5s ease;
+}
+
+
+.navbar-link:hover {
+  color: #6fbb73;
+}
+
+
+.i {
+  color: black;
+  transition: color 0.5s ease;
+}
+
+.i:hover {
+  color: #6fbb73;
+}
+
+.special {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 0.5s ease;
+}
+
+.special:hover {
+  color: #e4cd00;
+}
+
+.home {
+  height: 100vh;
+  background-color: #EFFDD9;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.headshot {
+  height: 90%;
+  
+}
+
+.dark-mode .headshot {
+  height: 90%;
+  
+}
+
+
+
+
+.projects {
+  padding: 40px 20px;
+  padding-left: 5%;
+  width: 60%;
+  background-color: #EFFDD9;
+  
+}
+
+
+.project-title {
+  font-size: 50px;
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+}
+
+
+
+
+.carousel {
+  padding-top: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%; /* Adjusted for a wider carousel */
+  height: 100%; 
+  overflow: hidden;
+  margin: 0 auto; /* Center the carousel */
+  transform: translateY(-100px);
+}
+
+.card-container {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  flex: 0 0 50%;
+  height: 100%; /* Ensures each card takes full height of the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  text-align: center;
+  overflow: hidden;
+  
+}
+
+.card-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-content h2{
+  font-family: "inria-serif-light", serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 90%;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #d9f0fd;
+  border-radius: 50px;
+}
+
+.skills p{
+  padding: 5px;
+  color: white;
+}
+
+.smaller-image {
+  position: absolute; /* Change to absolute positioning */
+  top: 30px; /* Adjust positioning as needed */
+  left: 150px; /* Adjust positioning as needed */
+  width: 70%; /* Adjust size as needed */
+  height: 70%;/* Adjust size as needed */
+  z-index: 1; /* Ensure smaller image is above larger image */
+  border-radius: 70px;
+  
+  transition: transform 0.3s ease-in-out; /* Smooth transition for showing/hiding */
+}
+
+.banner {
+  position: absolute; /* Change to absolute positioning */
+  bottom: 440px; /* Adjust positioning as needed */
+  right: 150px; /* Adjust positioning as needed */
+  width: 70%; /* Adjust size as needed */
+  height: 70%;/* Adjust size as needed */
+  z-index: 1; /* Ensure smaller image is above larger image */
+}
+
+
+.card:hover .smaller-image {
+  transform: translateY(-30%);
+  opacity: 1; /* Show smaller image on card hover */
+}
+
+.card-content h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.card-content p {
+  font-size: 1em;
+  color: #555;
+}
+
+.card-content.hidden {
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  display: flex;
+}
+
+.card-content.hidden * {
+  display: none;
+}
+
+
+.card-content.hidden *:not(.hidden-title) {
+  display: none;
+}
+
+.card-content.hidden *:not(.hidden-link) {
+  display: none;
+}
+
+.card-content.hidden *:not(.hidden-info) {
+  display: none;
+}
+
+.card-content.hidden *:not(.hidden-image) {
+  display: none;
+}
+
+.hidden-title {
+  display: none;
+  position: relative;
+  color: black;
+  font-size: 50px;
+  text-align: center;
+}
+
+.hidden-info {
+  display: none;
+  position: relative;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+
+.hidden-link {
+  display: none;
+  position: relative;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+.hidden-image {
+  display: none;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.card-content.hidden .hidden-title {
+  display: block;
+}
+
+.card-content.hidden .hidden-link {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-content.hidden .hidden-info {
+  display: block;
+}
+
+.card-content.hidden .hidden-image {
+  display: block;
+}
+
+
+
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.dark-mode .arrow{
+  color: white;
+}
+
+.about-section {
+  height: 100vh; /* Take up the whole viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFFDD9;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.aboutMe {
+  padding-right: 5px;
+  width: 60%;
+}
+
+.aboutMe h1 {
+  font-size: 30px;
+  font-family: "Inria Serif", serif;
+  font-weight: 50;
+  font-style: normal;
+  text-align: left;
+}
+
+.aboutMe h2{
+  font-family: "inria-serif-light", serif;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  font-size: 18px;
+}
+
+.confetti-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.confetti-hover::after {
+  content: " 🎉";
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.confetti-hover:hover::after {
+  opacity: 1;
+}
+
+.aboutMe h3{
+  font-family: "inria-serif-light", serif;
+  font-weight: 300;
+  font-style: normal;
+  width: 90%;
+  
+  font-size: 19px;
+  text-align: left;
+}
+
+.fun {
+  width: 30%;
+  align-self: right;
+}
+
+.stillHere {
+  display: flex;
+  flex-direction: row;
+  background-color: #EFFDD9;
+  align-items: center;
+  justify-content: center;
+}
+
+.stillHere h4 {
+  padding-right: 10px;
+}
+
+.f {
+  background-color: #EFFDD9;
+}
+
